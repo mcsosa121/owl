@@ -143,6 +143,8 @@ val bottom : arr -> int -> int array array
 
 val sort : arr -> arr
 
+val argsort : arr -> (int64, int64_elt, c_layout) Genarray.t
+
 val draw : ?axis:int -> arr -> int -> arr * int array
 
 val mmap : Unix.file_descr -> ?pos:int64 -> bool -> int array -> arr
@@ -431,7 +433,7 @@ val softplus : arr -> arr
 
 val softsign : arr -> arr
 
-val softmax : arr -> arr
+val softmax : ?axis:int -> arr -> arr
 
 val sigmoid : arr -> arr
 
@@ -726,7 +728,7 @@ val softsign_ : arr -> unit
 
 val sigmoid_ : arr -> unit
 
-val softmax_ : arr -> unit
+val softmax_ : ?axis:int -> arr -> unit
 
 val cumsum_ : ?axis:int -> arr -> unit
 

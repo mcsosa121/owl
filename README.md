@@ -84,7 +84,8 @@ First, you need to clone the repository.
 ```bash
 git clone git@github.com:owlbarn/owl.git
 ```
-or with 
+
+or with
 
 ```bash
 git clone https://github.com/owlbarn/owl.git
@@ -591,7 +592,7 @@ Now, let's see how to define a two-layer neural network.
 ```ocaml
 let nn = input [|784|]
   |> linear 300 ~act_typ:Activation.Tanh
-  |> linear 10  ~act_typ:Activation.Softmax
+  |> linear 10  ~act_typ:Activation.(Softmax 1)
   |> get_network
 ;;
 ```
@@ -671,6 +672,8 @@ Owl is under active development, and I really look forward to your comments and 
 
 Just pull the image and dig into code saved in `/root/owl`, then have fun!
 
-**Student Project:** If you happen to be a student in the [Computer Lab](http://www.cl.cam.ac.uk/) and want to do some challenging development and design, here are some [Part II Projects](http://www.cl.cam.ac.uk/research/srg/netos/stud-projs/studproj-17/#owl0). If you are interested in more researchy topics, I also offer Part III Projects and please contact me directly via [Email](mailto:liang.wang@cl.cam.ac.uk).
+**Student Projects:** If you happen to be a student in the [Computer Lab](http://www.cl.cam.ac.uk/) and want to do some challenging development and design, here are some [Part II Project suggestions](http://www.cl.cam.ac.uk/research/srg/netos/stud-projs/studproj-17/#owl0). If you are interested in more researchy topics, I also offer Part III Projects -- please contact me directly via [Email](mailto:liang.wang@cl.cam.ac.uk).
 
 **Acknowledgement: Funded in part by EPSRC project - Contrive (EP/N028422/1).** Please refer to the [full acknowledgement](https://github.com/owlbarn/owl/blob/master/ACKNOWLEDGEMENT.md) for more details.
+
+**Contribution Agreement:** Contributions must comply with the [Developer's Certificate of Origin](https://developercertificate.org/), which means you need to sign off your commits. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
